@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
+
+.nav {
+  font-family: "Kurale", serif;
+}
+
+.logo {
+  width: 16vh;
+  height: 12vh;
+  pointer-events: none;
+}
+
+.nav-links a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+.nav-links a,
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-bar {
+  background-color: rgb(217, 217, 217, 0.02);
+  box-shadow: 0 8px 24px rgba(0, 188, 212, 0.15);
+}
+
+.nav-bar-home{
+  background-color: rgb(217, 217, 217, 0.02);
+}
+
+@for $i from 1 through 100{
+  .font-size-#{$i} {
+    font-size: #{$i}px;
+  }
+  .font-weight-#{$i} {
+    font-weight: #{$i};
+  }
+}
+
+.motto{
+  color: #DAE3FF;
+}

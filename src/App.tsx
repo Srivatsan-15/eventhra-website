@@ -1,32 +1,32 @@
 import React from "react";
 import logo from "./images/logo.png";
 import "./App.scss";
+import Home from "./pages/Home";
+import Events from "./pages/Events";
 
 function App() {
+  const [navVariable, setnavVariable] = React.useState(1);
+  const [isIntra, setisIntra] = React.useState(true);
+  let content;
+  if (navVariable === 1) {
+    content = (
+      <Home
+        navVariable={navVariable}
+        setnavVariable={setnavVariable}
+      />
+    );
+  }
+  else if (navVariable === 2) {
+    content = (
+      <Events
+        navVariable={navVariable}
+        setnavVariable={setnavVariable}
+      />
+    );
+  }
   return (
-    <div className="row app">
-      <div className="col-md-12 overflow-y-scroll">
-        <div className=" vh-97 bg-eventhra ">
-          <div className="p-5 py-2 row nav-bar">
-            <div className="col-md-3">
-              <img className="logo" src={logo} alt="EventHRA Logo" />
-            </div>
-            <div className="col-md-9">
-              <div className="nav-links d-flex gap-5 align-items-center justify-content-end pt-4">
-                <a className="nav-link" href="#">Home</a>
-                <a className="nav-link" href="#">Events</a>
-                <a className="nav-link" href="#">Study Materials</a>
-                <a className="nav-link" href="#">Discussion Forum</a>
-                <a className="nav-link" href="#">About Us</a>
-              </div>
-            </div>
-          </div>
-          <h3 className="d-flex justify-content-center text-white font-size-64 motto">CODE COMPETE CONQUERE</h3>
-        </div>
-        
-      </div>
-    </div>
-    
+    <div>{content}</div>
+
   );
 }
 
