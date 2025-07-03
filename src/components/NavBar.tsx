@@ -14,53 +14,54 @@ function NavBar({
 }: Props) {
   return (
     <div className="row nav">
-      <div className="col-md-12"> 
-          <div className={`p-5 py-2 row ${navVariable === 1 ? 'nav-bar-home' : 'nav-bar'}`}>
-            <div className="col-md-3">
-              <img className="logo" src={logo} alt="EventHRA Logo" />
-            </div>
-            <div className="col-md-9">
-              <div className="nav-links d-flex gap-5 align-items-center justify-content-end pt-4">
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={() => setnavVariable(1)}
-                >
-                  Home
-                </a>
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={() => setnavVariable(2)}
-                >
-                  Events
-                </a>
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={() => setnavVariable(3)}
-                >
-                  Study Materials
-                </a>
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={() => setnavVariable(4)}
-                >
-                  Discussion Forum
-                </a>
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={() => setnavVariable(5)}
-                >
-                  Contact Us
-                </a>
-              </div>
-            </div>
-          </div>
+  <div className="col-md-12"> 
+    <div className={`p-5 py-2 row ${navVariable === 1 ? 'nav-bar-home' : 'nav-bar'}`}>
+      <div className="col-md-3">
+        <img className="logo" src={logo} alt="EventHRA Logo" />
+      </div>
+      <div className="col-md-9">
+        <div className="nav-links d-flex gap-5 align-items-center justify-content-end pt-4">
+          <a
+            className={`nav-link ${navVariable === 1 ? 'active' : ''}`}
+            href="#"
+            onClick={() => setnavVariable(1)}
+          >
+            Home
+          </a>
+          <a
+            className={`nav-link ${navVariable === 2 ? 'active' : ''}`}
+            href="#"
+            onClick={() => setnavVariable(2)}
+          >
+            Events
+          </a>
+          <a
+            className={`nav-link ${navVariable === 3 ? 'active' : ''}`}
+            href="#"
+            onClick={() => setnavVariable(3)}
+          >
+            Study Materials
+          </a>
+          <a
+            className={`nav-link ${navVariable === 4 ? 'active' : ''}`}
+            href="#"
+            onClick={() => setnavVariable(4)}
+          >
+            Discussion Forum
+          </a>
+          <a
+            className={`nav-link ${navVariable === 5 ? 'active' : ''}`}
+            href="#"
+            onClick={() => setnavVariable(5)}
+          >
+            Contact Us
+          </a>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
   );
 }
 
